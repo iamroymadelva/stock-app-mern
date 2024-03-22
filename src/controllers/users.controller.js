@@ -16,7 +16,7 @@ export const createUser = async (req, res) => {
     });
 
     // encrypting password
-    user.password = await User.encryptPassword(user.password);
+    user.password = await Users.encryptPassword(user.password);
 
     // saving the new user
     const newUser = await user.save();

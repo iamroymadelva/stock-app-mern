@@ -5,7 +5,7 @@ import * as productsController from '../controllers/products.controller'
 import {jwtAuth} from '../middlewares'
 
 //Products management
-router.post('/create',[jwtAuth.verifyToken, jwtAuth.isModerator], productsController.createProduct)
+router.post('/create',[jwtAuth.verifyToken, jwtAuth.isAdmin], productsController.createProduct)
 router.get('/', productsController.getProducts)
 router.get('/:productId', productsController.getProductById)
 router.put('/update/:productId', [jwtAuth.verifyToken, jwtAuth.isAdmin], productsController.updateProductById)

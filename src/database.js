@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-mongoose.connect("mongodb+srv://mokanadev:Man0t4$2024@myprojects.hp8g9bd.mongodb.net/stockapp",
+mongoose.connect(process.env.MONGODB_URL,
   {
     // useNewUrlParser: true,
     // useUnifiedTopology: true,
