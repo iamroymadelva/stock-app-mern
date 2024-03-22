@@ -6,6 +6,7 @@ import { createDefaultRoles } from './libs/defaultSetup' //Create default roles
 
 import productsRoutes from './routes/products.routes'
 import authRoutes from './routes/auth.routes'
+import usersRoutes from './routes/users.routes'
 
 
 const app = express()
@@ -27,6 +28,7 @@ app.get('/', (req,res) => {
 
 app.use('/api/products', productsRoutes)
 app.use('/api/auth', authRoutes)
+app.use('/api/user', usersRoutes)
 
 export default app;
 
